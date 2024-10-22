@@ -38,6 +38,10 @@
 }
 
 /*  Styling for whole site */
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }
@@ -238,7 +242,7 @@ header .navbar {
 
 .kyusho-image,
 .wingtsun-image {
-  object-position: 5px 10%;
+  object-position: 0px 10%;
 }
 
 .wingtsun-section .wingtsun-details .section-title,
@@ -273,7 +277,7 @@ header .navbar {
 .prices-section .prices-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 110px;
+  gap: 70px;
   align-items: start;
   justify-content: center;
 }
@@ -283,17 +287,26 @@ header .navbar {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  /* justify-content: space-between; */
-  width: calc(100% / 3 - 110px);
+  width: 310px;
+  height: 240px;
   border-radius: 28px;
   background-color: #373434;
-  height: 240px;
+  transition: 0.2s ease;
+}
+
+.prices-section .prices-list .price-item:hover {
+  scale: 1.1;
+  border: solid var(--secondary-color);
+}
+
+.price-title {
+  color: var(--secondary-color);
 }
 
 .price-title {
   font-size: var(--font-size-l) !important;
   font-weight: var(--font-weight-semibold);
-  margin: 1rem 0 !important;
+  margin: 1.5rem 0 !important;
 }
 
 .price-item * {
@@ -302,22 +315,16 @@ header .navbar {
   min-width: 245px;
 }
 
-.mt-5 {
-  margin-top: 1rem !important;
+.price-description {
+  height: 110px;
+}
+
+.price-price {
+  height: 55px;
+  align-content: end;
 }
 
 /* Responsive */
-
-@media screen and (max-width: 1024px) {
-  .prices-section .prices-list {
-    gap: 61px;
-  }
-
-  .prices-section .prices-list .price-item {
-    max-width: 245px;
-    width: 100%;
-  }
-}
 
 @media screen and (max-width: 900px) {
   :root {
@@ -422,7 +429,7 @@ header .navbar {
     aspect-ratio: 1;
   }
 
-  .prices-section .prices-list {
+  /* .prices-section .prices-list {
     gap: 61px;
   }
 
@@ -430,5 +437,5 @@ header .navbar {
     max-width: 245px;
 
     width: 100%;
-  }
+  } */
 }
