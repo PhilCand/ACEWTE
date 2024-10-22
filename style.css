@@ -201,36 +201,124 @@ header .navbar {
   background: var(--quaternary-color);
 }
 
-.wingtsun-section .section-content {
+.eskrima-section {
+  padding: 120px 0;
+  background: var(--white-color);
+}
+
+.kyusho-section {
+  padding: 120px 0;
+  background: var(--quaternary-color);
+}
+
+.wingtsun-section .section-content,
+.kyusho-section .section-content {
   display: flex;
   gap: 50px;
   align-items: center;
   justify-content: space-between;
 }
 
-.wingtsun-section .wingtsun-image-wrapper .wingtsun-image {
+.eskrima-section .section-content {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wingtsun-section .wingtsun-image-wrapper .wingtsun-image,
+.eskrima-section .eskrima-image-wrapper .eskrima-image,
+.kyusho-section .kyusho-image-wrapper .kyusho-image {
   width: 400px;
   height: 400px;
   object-fit: cover;
   border-radius: var(--border-radius-circle);
 }
 
-.wingtsun-section .wingtsun-details .section-title {
+.kyusho-image,
+.wingtsun-image {
+  object-position: 5px 10%;
+}
+
+.wingtsun-section .wingtsun-details .section-title,
+.eskrima-section .eskrima-details .section-title,
+.kyusho-section .kyusho-details .section-title {
   padding: 0;
 }
 
-.wingtsun-section .wingtsun-details {
+.wingtsun-section .wingtsun-details,
+.eskrima-section .eskrima-details,
+.kyusho-section .kyusho-details {
   max-width: 50%;
 }
 
-.wingtsun-section .wingtsun-details .text {
+.wingtsun-section .wingtsun-details .text,
+.eskrima-section .eskrima-details .text,
+.kyusho-section .kyusho-details .text {
   line-height: 30px;
   margin: 50px 0 30px;
   text-align: center;
   font-size: var(--font-size-l);
 }
 
+/* Prices section */
+
+.prices-section {
+  color: var(--white-color);
+  background: var(--dark-color);
+  padding: 50px 0 100px;
+}
+
+.prices-section .prices-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 110px;
+  align-items: start;
+  justify-content: center;
+}
+
+.prices-section .prices-list .price-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  width: calc(100% / 3 - 110px);
+  border-radius: 28px;
+  background-color: #373434;
+  height: 240px;
+}
+
+.price-title {
+  font-size: var(--font-size-l) !important;
+  font-weight: var(--font-weight-semibold);
+  margin: 1rem 0 !important;
+}
+
+.price-item * {
+  font-size: var(--font-size-m);
+  margin-bottom: 0.5rem;
+  min-width: 245px;
+}
+
+.mt-5 {
+  margin-top: 1rem !important;
+}
+
 /* Responsive */
+
+@media screen and (max-width: 1024px) {
+  .prices-section .prices-list {
+    gap: 61px;
+  }
+
+  .prices-section .prices-list .price-item {
+    max-width: 245px;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 900px) {
   :root {
     --font-size-m: 1rem;
@@ -303,7 +391,9 @@ header .navbar {
   }
 
   .hero-section .hero-details :is(.subtitle, .description),
-  .wingtsun-section .wingtsun-details {
+  .wingtsun-section .wingtsun-details,
+  .eskrima-section .eskrima-details,
+  .kyusho-section .kyusho-details {
     max-width: 100%;
   }
 
@@ -316,15 +406,29 @@ header .navbar {
     margin-right: 0;
   }
 
-  .wingtsun-section .section-content {
+  .wingtsun-section .section-content,
+  .eskrima-section .section-content,
+  .kyusho-section .section-content {
     gap: 70px;
     flex-direction: column-reverse;
   }
 
-  .wingtsun-section .wingtsun-image-wrapper .wingtsun-image {
+  .wingtsun-section .wingtsun-image-wrapper .wingtsun-image,
+  .eskrima-section .eskrima-image-wrapper .eskrima-image,
+  .kyusho-section .kyusho-image-wrapper .kyusho-image {
     width: 100%;
     height: 100%;
     max-width: 250px;
     aspect-ratio: 1;
+  }
+
+  .prices-section .prices-list {
+    gap: 61px;
+  }
+
+  .prices-section .prices-list .price-item {
+    max-width: 245px;
+
+    width: 100%;
   }
 }
