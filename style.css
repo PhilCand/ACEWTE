@@ -19,7 +19,7 @@
 }
 
 section {
-  height: 100dvh;
+  min-height: 100dvh;
   scroll-snap-align: start;
 }
 
@@ -220,7 +220,6 @@ header .navbar {
 
 .hero-section .hero-image-wrapper {
   max-width: 500px;
-  min-width: 400px;
   margin-right: 30px;
 }
 
@@ -546,6 +545,10 @@ section:last-child footer {
     height: 100%;
     max-width: 250px;
     aspect-ratio: 1;
+  }
+
+  .contact-section .section-title {
+    margin-bottom: -3rem;
   }
 
   /* .prices-section .prices-list {
