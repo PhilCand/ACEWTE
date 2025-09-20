@@ -9,10 +9,25 @@
   font-family: "Archivo", sans-serif;
 }
 
+.sections-container {
+  height: 100dvh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100dvh;
+  scroll-snap-align: start;
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Variables */
@@ -145,7 +160,6 @@ header .navbar {
 
 /* Hero section */
 .hero-section {
-  min-height: 100dvh;
   background: var(--primary-color);
 }
 
@@ -212,19 +226,16 @@ header .navbar {
 
 /* Wing Tsun section */
 .wingtsun-section {
-  min-height: 100dvh;
   padding: 120px 0;
   background: var(--quaternary-color);
 }
 
 .eskrima-section {
-  min-height: 100dvh;
   padding: 120px 0;
   background: var(--white-color);
 }
 
 .kyusho-section {
-  min-height: 100dvh;
   padding: 120px 0;
   background: var(--quaternary-color);
 }
@@ -285,7 +296,6 @@ header .navbar {
 /* Prices section */
 
 .prices-section {
-  min-height: 100dvh;
   color: var(--white-color);
   background: var(--dark-color);
   padding: 50px 0 70px;
@@ -350,17 +360,20 @@ header .navbar {
 /* Contact Section */
 
 .contact-section {
-  min-height: 100dvh;
   padding: 50px 0 100px;
   background: var(--white-color);
 }
 
 .contact-section .section-content {
-  min-height: 70dvh;
   display: flex;
   gap: 48px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
+  flex-direction: column;
+}
+
+.contact-section .section-title {
+  margin-top: 5rem;
 }
 
 .contact-section .contact-info-list .contact-info {
@@ -375,11 +388,16 @@ header .navbar {
   font-size: var(--font-size-m);
 }
 
+.contact-info p {
+  line-height: 30px;
+}
+
 .contact-instructor {
   line-height: 40px;
-  margin: 10px 50px 0px 0px;
+  /* margin: 10px 50px 0px 0px; */
   align-items: center;
   font-size: var(--font-size-m);
+  margin-left: 30px;
 }
 
 .contact-instructor .instructor-title {
@@ -394,17 +412,33 @@ header .navbar {
   color: var(--white-color);
 }
 
-.footer-section .section-content .copyright-text {
+.footer-section .copyright-text {
   text-align: center;
+}
+
+section:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push footer to bottom */
+  min-height: 100vh;
+  padding: 0.001rem;
+}
+
+section:last-child footer {
+  /* Optional styling */
+  margin-top: auto; /* Ensures footer stays at bottom if content doesn't fill */
+  padding: 1rem 0;
+  background: #222;
+  color: white;
 }
 
 /* Responsive */
 
 @media screen and (max-width: 700px) {
-  .contact-section .section-content {
+  /* .contact-section .section-content {
     flex-direction: column-reverse;
     align-items: center;
-  }
+  } */
 
   .section-content {
     justify-content: flex-end !important;

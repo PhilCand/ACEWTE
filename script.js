@@ -13,3 +13,9 @@ navButtons.forEach((button) => {
     document.body.classList.remove("show-mobile-menu")
   );
 });
+
+const container = document.querySelector(".sections-container");
+document.getElementById("scrollTop").addEventListener("click", function (e) {
+  e.preventDefault(); // Prevent default jump
+  container.scrollTo({ top: 0, behavior: "smooth" });
+});
