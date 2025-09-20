@@ -145,14 +145,14 @@ header .navbar {
 
 /* Hero section */
 .hero-section {
-  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--primary-color);
 }
 
 .hero-section .section-content {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   color: var(--white-color);
   justify-content: space-between;
 }
@@ -212,23 +212,26 @@ header .navbar {
 
 /* Wing Tsun section */
 .wingtsun-section {
+  min-height: 100dvh;
   padding: 120px 0;
   background: var(--quaternary-color);
 }
 
 .eskrima-section {
+  min-height: 100dvh;
   padding: 120px 0;
   background: var(--white-color);
 }
 
 .kyusho-section {
+  min-height: 100dvh;
   padding: 120px 0;
   background: var(--quaternary-color);
 }
 
 .wingtsun-section .section-content,
 .kyusho-section .section-content {
-  min-height: 80vh;
+  min-height: 70dvh;
   display: flex;
   gap: 50px;
   align-items: center;
@@ -236,7 +239,7 @@ header .navbar {
 }
 
 .eskrima-section .section-content {
-  min-height: 80vh;
+  min-height: 70dvh;
   display: flex;
   flex-direction: row-reverse;
   gap: 50px;
@@ -282,7 +285,7 @@ header .navbar {
 /* Prices section */
 
 .prices-section {
-  min-height: 100vh;
+  min-height: 100dvh;
   color: var(--white-color);
   background: var(--dark-color);
   padding: 50px 0 70px;
@@ -347,12 +350,13 @@ header .navbar {
 /* Contact Section */
 
 .contact-section {
+  min-height: 100dvh;
   padding: 50px 0 100px;
   background: var(--white-color);
 }
 
 .contact-section .section-content {
-  min-height: 65vh;
+  min-height: 70dvh;
   display: flex;
   gap: 48px;
   align-items: flex-start;
@@ -389,12 +393,6 @@ header .navbar {
   background: var(--dark-color);
   color: var(--white-color);
 }
-
-/* .footer-section .section-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
 
 .footer-section .section-content .copyright-text {
   text-align: center;
