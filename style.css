@@ -64,6 +64,10 @@ button {
 
 img {
   width: 100%;
+  /* max-width: 20rem;
+  max-height: 20rem;
+  width: auto;
+  height: auto; */
 }
 
 .section-content {
@@ -414,7 +418,7 @@ header .navbar {
     --font-size-m: 1rem;
     --font-size-l: 1.3rem;
     --font-size-xl: 1.5rem;
-    --font-size-xxl: 1.8rem;
+    --font-size-xxl: 3rem;
   }
 
   body.show-mobile-menu header::before {
